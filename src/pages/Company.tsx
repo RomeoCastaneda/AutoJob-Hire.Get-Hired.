@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Briefcase, Plus, Search, Users, Target, TrendingUp } from "lucide-react";
+import { Briefcase, Plus, Search, Users, Target, TrendingUp, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,7 +9,17 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 
 const Company = () => {
-  const [view, setView] = useState<"dashboard" | "create" | "search">("dashboard");
+  const [view, setView] = useState<"dashboard" | "create" | "search" | "matches">("dashboard");
+  const [vacancyData, setVacancyData] = useState({
+    title: "",
+    department: "",
+    location: "",
+    type: "",
+    description: "",
+    skills: "",
+    experience: "",
+    salary: "",
+  });
 
   const mockMatches = [
     { name: "María González", role: "Frontend Developer", match: 98, skills: ["React", "TypeScript", "Tailwind"] },
@@ -187,13 +197,81 @@ const Company = () => {
                     </div>
                   </div>
 
-                  <Button variant="hero" size="lg" className="w-full">
+                  <Button 
+                    variant="hero" 
+                    size="lg" 
+                    className="w-full"
+                    onClick={() => {
+                      // Simular publicación y búsqueda de candidatos
+                      setView("matches");
+                    }}
+                  >
                     <Target className="w-5 h-5" />
                     Publicar y Encontrar Candidatos
                   </Button>
                 </div>
               </div>
             </Card>
+          )}
+
+          {/* Matches View - After Publishing */}
+          {view === "matches" && (
+            <div className="space-y-8">
+              <Card className="glass-dark p-8 text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary mx-auto mb-6 animate-glow">
+                  <Sparkles className="w-10 h-10 text-white" />
+                </div>
+                <h2 className="text-3xl font-bold mb-3">¡Vacante Publicada!</h2>
+                <p className="text-muted-foreground mb-2">
+                  Nuestra IA ha analizado tu vacante y encontró estos candidatos perfectos
+                </p>
+                <p className="text-sm text-muted-foreground mb-6">
+                  Los candidatos con mayor match aparecen primero
+                </p>
+                <Button variant="ghost" onClick={() => setView("dashboard")}>
+                  ← Volver al Dashboard
+                </Button>
+              </Card>
+
+              <div className="space-y-6">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-2xl font-bold">Top Matches para tu Vacante</h2>
+                  <Badge className="gradient-primary text-white text-lg px-4 py-2">
+                    {mockMatches.length} Candidatos Encontrados
+                  </Badge>
+                </div>
+                <div className="grid gap-4">
+                  {mockMatches.map((match, index) => (
+                    <Card key={index} className="glass p-6 hover-lift">
+                      <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                        <div className="flex-1">
+                          <div className="flex items-start justify-between mb-3">
+                            <div>
+                              <h3 className="text-xl font-bold">{match.name}</h3>
+                              <p className="text-muted-foreground">{match.role}</p>
+                            </div>
+                            <Badge className="gradient-primary text-white text-base px-3 py-1">
+                              {match.match}% Match
+                            </Badge>
+                          </div>
+                          <div className="flex flex-wrap gap-2">
+                            {match.skills.map((skill, idx) => (
+                              <Badge key={idx} variant="secondary" className="bg-muted">
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="flex gap-3">
+                          <Button variant="outline">Ver Perfil Completo</Button>
+                          <Button variant="hero">Agregar a Vacante</Button>
+                        </div>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </div>
           )}
 
           {/* Search View */}
