@@ -49,7 +49,7 @@ const Features = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6">
-            Tecnología que <span className="text-gradient">Transforma</span>
+            Tecnología que <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Transforma</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Conectamos talento con oportunidades usando IA de última generación
@@ -78,7 +78,7 @@ const Features = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h3 className="text-3xl lg:text-4xl font-bold">
-                Matching Inteligente <span className="text-gradient">con IA</span>
+                Matching Inteligente <span className="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">con IA</span>
               </h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Nuestro algoritmo de inteligencia artificial analiza cientos de puntos de datos para encontrar el match perfecto entre candidatos y vacantes.

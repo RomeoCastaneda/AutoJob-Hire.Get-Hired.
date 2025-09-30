@@ -31,7 +31,7 @@ const Company = () => {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                   <div>
                     <h1 className="text-4xl sm:text-5xl font-black mb-2">
-                      <span className="text-gradient">Panel de Empresa</span>
+                      <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Panel de Empresa</span>
                     </h1>
                     <p className="text-xl text-muted-foreground">
                       Gestiona vacantes y encuentra el talento perfecto

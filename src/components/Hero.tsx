@@ -33,9 +33,9 @@ const Hero = () => {
 
           {/* Main headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black tracking-tight leading-none">
-            <span className="text-gradient">HIRE.</span>
+            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">HIRE.</span>
             <br />
-            <span className="text-gradient">GET HIRED.</span>
+            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">GET HIRED.</span>
           </h1>
 
           {/* Subheadline */}
@@ -73,21 +73,21 @@ const Hero = () => {
             <div className="glass-dark rounded-2xl p-6 hover-lift">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Zap className="w-5 h-5 text-primary animate-glow" />
-                <p className="text-4xl font-bold text-gradient">98%</p>
+                <p className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">98%</p>
               </div>
               <p className="text-sm text-muted-foreground">Match Accuracy</p>
             </div>
             <div className="glass-dark rounded-2xl p-6 hover-lift" style={{ animationDelay: "0.1s" }}>
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Zap className="w-5 h-5 text-secondary animate-glow" />
-                <p className="text-4xl font-bold text-gradient">10x</p>
+                <p className="text-4xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">10x</p>
               </div>
               <p className="text-sm text-muted-foreground">Más Rápido</p>
             </div>
             <div className="glass-dark rounded-2xl p-6 hover-lift" style={{ animationDelay: "0.2s" }}>
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Zap className="w-5 h-5 text-accent animate-glow" />
-                <p className="text-4xl font-bold text-gradient">24/7</p>
+                <p className="text-4xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">24/7</p>
               </div>
               <p className="text-sm text-muted-foreground">Disponibilidad</p>
             </div>

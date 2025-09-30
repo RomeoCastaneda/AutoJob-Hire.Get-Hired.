@@ -16,7 +16,7 @@ const Header = () => {
             onClick={() => navigate("/")}
             className="text-2xl sm:text-3xl font-black tracking-tight hover:scale-105 transition-transform"
           >
-            <span className="text-gradient">AUTO</span>
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AUTO</span>
             <span className="text-primary">JOB</span>
           </button>
 

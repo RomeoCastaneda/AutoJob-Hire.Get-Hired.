@@ -41,7 +41,7 @@ const Candidate = () => {
               <span>Para Candidatos</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4">
-              <span className="text-gradient">GET HIRED</span>
+              <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">GET HIRED</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Sube tu CV y deja que nuestra IA lo envíe automáticamente a las empresas perfectas para ti
