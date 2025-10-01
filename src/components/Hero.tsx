@@ -33,9 +33,9 @@ const Hero = () => {
 
           {/* Main headline */}
           <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black tracking-tight leading-none">
-            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">HIRE.</span>
+            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent hover:scale-105 transition-transform inline-block cursor-pointer">HIRE.</span>
             <br />
-            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">GET HIRED.</span>
+            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent hover:scale-105 transition-transform inline-block cursor-pointer">GET HIRED.</span>
           </h1>
 
           {/* Subheadline */}

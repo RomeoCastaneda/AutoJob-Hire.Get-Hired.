@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, Zap } from "lucide-react";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -14,10 +14,13 @@ const Header = () => {
           {/* Logo */}
           <button 
             onClick={() => navigate("/")}
-            className="text-2xl sm:text-3xl font-black tracking-tight hover:scale-105 transition-transform"
+            className="flex items-center gap-2 text-2xl sm:text-3xl font-black tracking-tight hover:scale-105 transition-transform group"
           >
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AUTO</span>
-            <span className="text-primary">JOB</span>
+            <Zap className="w-6 h-6 sm:w-7 sm:h-7 text-primary animate-glow group-hover:rotate-12 transition-transform" />
+            <div>
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AUTO</span>
+              <span className="text-primary">JOB</span>
+            </div>
           </button>
 
           {/* Navigation */}
